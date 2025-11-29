@@ -24,15 +24,6 @@ export const metadata: Metadata = {
     description: 'Experience the next level of Skyblock and maximize your grinding potential with Cobalt.',
     url: 'https://cobalt.quiteboring.dev',
     siteName: 'cobalt.quiteboring.dev',
-
-    images: [
-      {
-        url: 'https://cobalt.quiteboring.dev/logo.png',
-        width: 250,
-        height: 250,
-      },
-    ],
-
     locale: 'en_US',
     type: 'website',
   },
