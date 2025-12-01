@@ -1,5 +1,6 @@
-import React from "react";
-import { getDiscordAvatarUrl } from "../../data/team";
+import React from 'react';
+import { getDiscordAvatarUrl } from '../data/team';
+import { Badge } from '@/components/ui/badge';
 
 interface UserProps {
   name: string;
@@ -8,7 +9,12 @@ interface UserProps {
   role: string;
 }
 
-export default function User({ name, userId, avatarHash, role }: UserProps) {
+export default function User({
+  name,
+  userId,
+  avatarHash,
+  role,
+}: UserProps) {
   const avatarUrl = getDiscordAvatarUrl(userId, avatarHash);
 
   return (
@@ -21,9 +27,7 @@ export default function User({ name, userId, avatarHash, role }: UserProps) {
         />
       </div>
       <h3 className="mb-1 text-lg font-bold text-white">{name}</h3>
-      <span className="rounded-full border border-[#347BB2] bg-[#347BB2]/20 px-3 py-0.5 text-xs font-medium text-[#347BB2]">
-        {role}
-      </span>
+      <Badge variant="outline">{role}</Badge>
     </div>
   );
 }
